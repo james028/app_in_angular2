@@ -1,0 +1,47 @@
+.comment-1
+{
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 5px;
+}
+.comment-text
+{
+    border-bottom: 1px solid #BDC3C7;
+}
+.comment-vote .fa 
+{
+    font-size: 22px;
+    padding: 8px;
+}
+.comment-vote .fa-thumbs-up
+{
+    color: green;
+}
+.comment-vote .fa-thumbs-down
+{
+    color: #E74C3C;
+}
+.comment-vote button
+{
+    /*border: 1px solid #2C3E50;*/
+    border-radius: 3px;
+    background: #B5BFD5;
+    box-shadow: none;
+    border: none;
+}
+.comment-vote .comment-vote-1
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px auto;
+}
+.comment-text-2
+{
+    margin: 20px auto;
+}
+.comment-text-user
+{
+    font-size: 17px;
+    font-weight: bold;
+}

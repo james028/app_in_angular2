@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.article-all
+{
+    margin-bottom: 30px;
+    border-bottom: 1px solid #000;
+}
+.title
+{
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 40px auto 15px;
+}
+.article-all img
+{
+    width: 100%;
+    height: 250px;
+    
+}
+.title-down
+{
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    font-size: 18px;
+}
+.title-down .author
+{
+    margin-right: 15px;
+}
+.art-1, .art-2
+{
+    margin: 20px auto 10px;
+}
+.art-1 .art1-title, .art-2 .art2-title
+{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 18px;
+    margin: 20px auto;
+}
+.art-2 .art2-text
+{
+    display: flex;
+}
+.art2-text img
+{
+    flex-basis: 40%;
+    padding: 0px 30px 5px 0;
+}
+
