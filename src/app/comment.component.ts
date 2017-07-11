@@ -14,7 +14,7 @@ export class CommentComponent implements OnInit {
 
 
  ii: Comment;
- aa: Object[];
+ //aa: Object[];
 
   Plus() : boolean {
     this.ii.votePlus();
@@ -26,19 +26,14 @@ export class CommentComponent implements OnInit {
     return false;
   }
  
- //remove(i) {
-   //this.aa.splice(i,1);
- //}
-
-
-
-    deleteItem(message:string) {
+ 
+    /*deleteItem(message:string) {
         this.dataService.deleteMsg(message);
     }
     
     constructor(private dataService: DataService) { 
           
-    }
+    }*/
 
 
 
