@@ -12,9 +12,8 @@ import { DataService } from './data.service';
 })
 export class CommentComponent implements OnInit {
 
-
  ii: Comment;
- //aa: Object[];
+ 
 
   Plus() : boolean {
     this.ii.votePlus();
@@ -34,8 +33,6 @@ export class CommentComponent implements OnInit {
     constructor(private dataService: DataService) { 
           
     }*/
-
-
 
   ngOnInit() {
 
