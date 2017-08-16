@@ -19,6 +19,5 @@ export class Comment {
       this.votes -= 1;
     }
 
-    
 
 }
