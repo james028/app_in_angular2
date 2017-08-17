@@ -82,6 +82,13 @@
     .img-1
     {
         height: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .img-2
+    {
+        background-position: center;
+        width: 70%;
     }
     .art2-text
     {
