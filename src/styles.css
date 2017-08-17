@@ -74,6 +74,22 @@
 
 
 @media (max-width: 540px) {
-		
-
+	.title 
+    {
+    font-size: 20px;
+    margin: 20px auto 10px;
+    }
+    .img-1
+    {
+        height: 200px;
+    }
+    .art2-text
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .art2-text .img-2
+    {
+        margin: 10px auto;
+    }
 }
