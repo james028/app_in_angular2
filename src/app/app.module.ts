@@ -5,8 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CommentComponent } from './comment.component';
 import { CommentService } from './comment-service';
-import { DataService } from './data.service';
-
 
 
 
@@ -21,8 +19,7 @@ import { DataService } from './data.service';
     ReactiveFormsModule
   ],
   providers: [
-    CommentService,
-    DataService
+    CommentService
   ],
   bootstrap: [AppComponent]
 })

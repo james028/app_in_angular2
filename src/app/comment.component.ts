@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Comment } from './comment';
 import { CommentService } from './comment-service';
 import { COMMENT } from './comment-data';
-import { DataService } from './data.service';
+
 
 @Component({
   selector: 'app-comment',
@@ -25,14 +25,13 @@ export class CommentComponent implements OnInit {
     return false;
   }
  
- 
-    /*deleteItem(message:string) {
-        this.dataService.deleteMsg(message);
-    }
-    
-    constructor(private dataService: DataService) { 
+
+    constructor(private _comSer: CommentService) { 
           
-    }*/
+    }
+    onDeleteComm( art: Comment) {
+      this._comSer.deleteComm(art);
+    }
 
   ngOnInit() {
 
