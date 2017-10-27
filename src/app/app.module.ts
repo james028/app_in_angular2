@@ -1,26 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
-import { CommentComponent } from './comment.component';
-import { CommentService } from './comment-service';
-
-
+import { CommentComponent } from './comment/comment.component';
+import { CommentListComponent } from './comment-list/comment-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommentComponent
-
+    CommentComponent,
+    CommentListComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule
   ],
-  providers: [
-    CommentService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

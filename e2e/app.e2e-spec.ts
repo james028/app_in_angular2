@@ -1,14 +1,14 @@
-import { Bb2Page } from './app.po';
+import { AppPage } from './app.po';
 
-describe('bb2 App', () => {
-  let page: Bb2Page;
+describe('bb3 App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new Bb2Page();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });

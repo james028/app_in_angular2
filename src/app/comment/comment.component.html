@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+          <form [formGroup]="CommentForm" (ngSubmit)="onSubmit()">
+              <p class="add">Dodaj komentarz</p>
+              <div class="name" >
+                  <p class="nick">Podaj swój nick: </p>
+                  <input type="text" class="name-inp" formControlName="nick" name="nick">
+              </div>
+              <div class="comment" >
+                  <p class="comm">Komentarz: </p>
+                  <textarea class="comm2"  formControlName="text" name="text"></textarea>
+              </div>
+              <div class="btn">
+                  <button type="submit" class="btn-1">Skomentuj</button>
+              </div>
+          </form>
+      </div>
+  </div>  
+</div>
+<!--<app-comment-list *ngFor="let com of comments" [com]="com" ></app-comment-list>-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 comment-1" *ngFor="let com of comments">
+                <div class="comment-text">
+                    <p class="comment-text-user">napisał: {{ com.nick | uppercase }}</p>
+                    <p class="comment-text-2">{{ com.text }}</p>
+                </div>
+                <div class="comment-vote">
+                    <div class="comment-vote-1">Ocena: {{com.votes}}</div>
+                    <button class="votePlus" (click)="Plus()" >
+                        <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                    </button>
+                    <button class="voteMinus" (click)="Minus()" >
+                        <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                    </button>
+                    <button class="remove" (click)="deleteComment(val)" >
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                </div>
+        </div>
+    </div>
+  </div> 
+  
+
+
+
+<!-- 
+[ngClass]="{'has-error':!Comm.controls['nick'].valid && Comm.controls['nick'].touched}"
+[ngClass]="{'has-error':!Comm.controls['text'].valid && Comm.controls['text'].touched}"
+[ngClass]="{ disabled: !Comm.valid }" 
+
+-->
