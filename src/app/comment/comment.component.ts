@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, NgForm, Validators } from '@angular/forms';
 
-
+import { CommentService } from '../comment.service';
 import { NewComment } from '../comment.data';
 
 @Component({
@@ -17,9 +17,9 @@ export class CommentComponent implements OnInit {
   nick;
   text;
   CommentForm: FormGroup;
-  
 
-  constructor() { 
+
+  constructor(private CService: CommentService) { 
       this.CommentForm = new FormGroup({
         nick: new FormControl(),
         text: new FormControl()
@@ -31,10 +31,13 @@ export class CommentComponent implements OnInit {
   }
 
   onSubmit() {
-      this.comments.unshift({
+
+     let addComment = {
         nick: this.CommentForm.value.nick,
         text: this.CommentForm.value.text
-      });
+      };
+
+      this.comments.unshift(addComment);
   }
 
 
@@ -44,4 +47,8 @@ export class CommentComponent implements OnInit {
   }
 
   
+
+   
+
 }
+ 

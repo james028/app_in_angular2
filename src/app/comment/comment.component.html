@@ -19,15 +19,16 @@
   </div>  
 </div>
 <!--<app-comment-list *ngFor="let com of comments" [com]="com" ></app-comment-list>-->
+<ul *ngFor="let com of comments">
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 comment-1" *ngFor="let com of comments">
+        <div class="col-md-8 col-md-offset-2 comment-1">
                 <div class="comment-text">
                     <p class="comment-text-user">napisał: {{ com.nick | uppercase }}</p>
                     <p class="comment-text-2">{{ com.text }}</p>
                 </div>
                 <div class="comment-vote">
-                    <div class="comment-vote-1">Ocena: {{com.votes}}</div>
+                    <div class="comment-vote-1">Ocena: {{com.votes || 0}}</div>
                     <button class="votePlus" (click)="Plus()" >
                         <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                     </button>
@@ -41,7 +42,9 @@
         </div>
     </div>
   </div> 
+  </ul>
   
+
 
 
 
